@@ -53,7 +53,7 @@ acp_cheatsheet -
     * 可以從網站介面下手（使用 `New Pull Request`）
     * 也可以從 command line 上執行 merge 工程
 * update 方式：
-    * Scenairo: 假設目前位於 `2018_Spring_kevinbird61`，想要更新到最新版的 `master` 進度，可以用下列指令：
+    * Scenario: 假設目前位於 `2018_Spring_kevinbird61`，想要更新到最新版的 `master` 進度，可以用下列指令：
     ```bash
     # 換到工作 branch 底下
     git checkout 2018_Spring_kevinbird61
