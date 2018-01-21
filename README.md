@@ -12,3 +12,7 @@ Cheat sheet for algorithm list of ACP(Advanced Competitive Programming) course.
 * [課程連結](2018_Spring/)
 
 ---
+
+## Reference
+
+* [C++ STL <algorithm> 使用](http://www.cplusplus.com/reference/algorithm/)
