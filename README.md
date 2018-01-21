@@ -15,4 +15,4 @@ Cheat sheet for algorithm list of ACP(Advanced Competitive Programming) course.
 
 ## Reference
 
-* [C++ STL <algorithm> 使用](http://www.cplusplus.com/reference/algorithm/)
+* [C++ STL \<algorithm\> 使用](http://www.cplusplus.com/reference/algorithm/)
