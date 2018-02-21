@@ -4,6 +4,12 @@
 #include <stdlib.h>
 
 void helper();
+/* basic method - threshold, counter two separated array */
+void t_c_detector(const char *str);
+/* improved method - wide word and merged array */
+// void wideword_mergedarr(const char *str);
+/* improved method - chi-square */
+// void chi_square(const char *str);
 char *append_str(const char *old,const char *new);
 char *append_char(const char *old,const char c);
 
@@ -45,13 +51,13 @@ int main(int argc, char *argv[])
 		} else {
 			// dealing with tmp
 			// printf("%s\n",tmp);
-			/* 
-                TODO: store them into table
+			/*
+			    TODO: store them into table
 
-                - Using Threshold, Counter array to specified the evil packet
-                treat each line read from input file as url (with buffer overflow)
-            */
-
+			    - Using Threshold, Counter array to specified the evil packet
+			    treat each line read from input file as url (with buffer overflow)
+			*/
+			t_c_detector(tmp);
 			// free
 			/* NOTICE:
 			    - If we use malloc instead, only using free() to free the memory will cause error
@@ -68,6 +74,27 @@ int main(int argc, char *argv[])
 
 	fclose(fp);
 	return 0;
+}
+
+void t_c_detector(const char *str)
+{
+	// get the length
+	int length = (int)strlen(str);
+	// init table
+	int *counter_arr,*threshold_arr;
+	counter_arr = calloc(128, sizeof(int));
+	// TODO: get threshold array
+
+	for(int i=0; i<length; i++) {
+		counter_arr[(int)str[i]]++;
+	}
+
+	// print, skip 0~32, and 127
+	for(int i=33; i<127; i++) {
+		printf("%c | %d\n",(char)i,counter_arr[i]);
+	}
+
+	free(counter_arr);
 }
 
 char *append_str(const char *old,const char *new)
