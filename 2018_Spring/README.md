@@ -20,6 +20,7 @@
 
 * [UVA](https://uva.onlinejudge.org/)
     * 相關工具： [uHunt](https://uhunt.onlinejudge.org/)，用來追蹤題目狀況、以及某個用戶的答題情況
+    * 相關工具： [uDebug](https://www.udebug.com/)，可以拿到一些可信度高的測資，在 submit 前可以拿來測試你的程式！
 
 * [POJ - 北京大學](http://poj.org/)
 
