@@ -16,8 +16,14 @@
         * Stack/Queue
         * DFS/BFS
 
+## Reference
 
+* [UVA](https://uva.onlinejudge.org/)
+    * 相關工具： [uHunt](https://uhunt.onlinejudge.org/)，用來追蹤題目狀況、以及某個用戶的答題情況
+
+* [POJ - 北京大學](http://poj.org/)
 
 > 課程參與人員：
 >
 > [kevinbird61](https://github.com/kevinbird61) (瞿旭民)
+> ... (more)
