@@ -20,14 +20,18 @@ int main()
             // sort
             std::sort(arr,arr+N,compare);
             // cal
-            int max;
-            for(int i=0;i<N;i++){
-                if(N-i >= arr[i] && i < arr[i]){
-                    // h-index found, take its maximum 
-                    max = arr[i];
+            int i;
+            for(i=0;i<N;i++){
+                if(arr[i] >= N-i){
+                    // h-index found
+                    printf("%d\n", N-i);
+                    break;
                 }
             }
-            printf("%d\n",max);
+            if (i == N) { // If all citations are zero
+                // h-index is 0
+                printf("%d\n", 0);
+            }
             free(arr);
         }
     }
