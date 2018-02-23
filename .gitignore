@@ -1,3 +1,2 @@
-*.txt
-a.out
-*.orig
+.DS_Store
+
