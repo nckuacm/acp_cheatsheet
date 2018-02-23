@@ -25,6 +25,9 @@
 * [POJ - 北京大學](http://poj.org/)
 
 > 課程參與人員：
->
+> 
+> [a0987856762](a0987856762@gmail.com) (Jheng Huang, Hong) - Vector, Map, String
+> [petermouse](petermouselin@gmail.com) (Syuan Yi, Lin) - Sorting
+> [vtim99077](vtim99077@gmail.com) (徐偉庭) - Basic I/O
 > [kevinbird61](https://github.com/kevinbird61) (瞿旭民)
 > ... (more)
