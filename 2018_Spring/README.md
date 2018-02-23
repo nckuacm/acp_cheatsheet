@@ -26,8 +26,14 @@
 
 > 課程參與人員：
 > 
+> [khtp91113](khtp91113@gmail.com) (Chun-Chi, Fang) - Disjoint set
+> 
 > [a0987856762](a0987856762@gmail.com) (Jheng Huang, Hong) - Vector, Map, String
+>
 > [petermouse](petermouselin@gmail.com) (Syuan Yi, Lin) - Sorting
+>
 > [vtim99077](vtim99077@gmail.com) (徐偉庭) - Basic I/O
+>
 > [kevinbird61](https://github.com/kevinbird61) (瞿旭民)
+> 
 > ... (more)
