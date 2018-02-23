@@ -1,7 +1,7 @@
 # PC^2
 
 ## script.sh
-change specific url before used.
+**change specific url before used.**
 
 function: 
 - Download & unzip pc^2 to desktop
