@@ -1,4 +1,4 @@
-date="20180223"
+date="20180224"
 
 wget https://github.com/toolbuddy/acp_cheatsheet/raw/master/program/pc2/$date/pc2_$date.zip
 wget https://github.com/toolbuddy/acp_cheatsheet/raw/master/program/pc2/$date/questions_$date.zip
