@@ -7,14 +7,15 @@
 
 * [寒訓 (Winter Program)](Winter_program/)
     * Day 1 (2/24):
-        * I/O
-        * Sorting
+        * [I/O](Winter_program/Basic_IO)
+        * [Sorting](Winter_program/Sorting)
     * Day 2 (2/25):
-        * Vector/Map/String
-        * Disjoint Set
+        * [Vector/Map/String](Winter_program/Vector_Map_String)
+        * [Disjoint Set](Winter_program/Disjoint_set)
     * Day 3 (2/26):
-        * Stack/Queue
-        * DFS/BFS
+        * [Stack/Queue](Winter_program/Stack_Queue)
+        * [DFS/BFS](Winter_program/DFS_BFS)
+    * [比賽題目](Winter_program/Competition)
 
 ## Reference
 
@@ -26,13 +27,13 @@
 
 > 課程參與人員：
 > 
-> [khtp91113](khtp91113@gmail.com) (Chun-Chi, Fang) - Disjoint set
+> [khtp91113](khtp91113@gmail.com) (Chun-Chi, Fang)
 > 
-> [a0987856762](a0987856762@gmail.com) (Jheng Huang, Hong) - Vector, Map, String
+> [a0987856762](a0987856762@gmail.com) (Jheng Huang, Hong)
 >
-> [petermouse](petermouselin@gmail.com) (Syuan Yi, Lin) - Sorting
+> [petermouse](petermouselin@gmail.com) (Syuan Yi, Lin)
 >
-> [vtim99077](vtim99077@gmail.com) (徐偉庭) - Basic I/O
+> [vtim99077](vtim99077@gmail.com) (徐偉庭)
 >
 > [kevinbird61](https://github.com/kevinbird61) (瞿旭民)
 > 
