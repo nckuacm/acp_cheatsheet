@@ -17,6 +17,87 @@
         * [DFS/BFS](Winter_program/DFS_BFS)
     * [比賽題目](Winter_program/Competition)
 
+* [Week 1 - 3/7 (Week1)]()
+    * 課堂內容
+        * Sorting
+        * Disjoint set
+        * DFS/BFS
+    * 練習（ 9 題 ）
+
+* [Week 2 - 3/14 (Week2)]()
+    * 課堂內容
+        * Math (exGCD, Big Number, eps, prime number)
+        * 快速冪
+
+* [Week 3 - 3/21 (Week3)]()
+    * 課堂內容
+        * Backtracking, DP
+
+* [Week 4 - 3/28 (Week4)]()
+    * 課堂內容
+        * Binary Search
+        * STL
+            * lower_bound
+            * upper
+            * tuple
+            * priority_queue
+            * struct
+            * pair
+        * LCS
+        * LIS
+
+* [Week 5 - 4/11 (Week5)]()
+    * 課堂內容
+        * Shortest Path
+
+* [Week 6 - 4/18]()
+    * ITSA/PTC 比賽
+
+* [Week 7 - 4/25 (Week7)]()
+    * 課堂內容
+        * Strong Connected Component
+
+* [Week 8 - 5/2 (Week8)]()
+    * 課堂內容
+        * MST (最小生成樹)
+        * Dynamic Programming - 2 dimension
+
+* [Week 9 - 5/9 (Week 9)]()
+    * 講課內容
+        * String Matching
+            * Hashing
+            * KMP
+            * Z-Algorithm
+            * Trie
+
+* [Week 10 - 5/16]()
+    * 期中團體賽
+
+* [Week 11 - 5/23 (Week11)]()
+    * 課堂內容
+        * Max Flow
+        * MCMF (最小花費、最大 flow)
+
+* [Week 12 - 5/30 (Week 12)]()
+    * 課堂內容
+        * Matching (Bipartite)
+
+* [Week 13 - 6/6 (Week 13)]()
+    * 課堂內容
+        * Binary Indexed Tree
+        * Segment Tree
+
+* [Week 14 - 6/13]()
+    * ITSA/PTC 比賽
+
+* [Week 15 - 6/20 (Week 15)]()
+    * 課堂內容
+        * LINE Intersection
+        * Convex Hull
+
+* [Week 16 - 6/27]()
+    * 期末團體賽
+
 ## Reference
 
 * [UVA](https://uva.onlinejudge.org/)
