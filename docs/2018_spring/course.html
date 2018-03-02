@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="icon.ico">
+		<title>2017 Spring NCKU ACM Training Courses</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" charset="utf-8"></script>
+
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+    <div class="ui center aligned raised segment inverted" style="background:rgba(0, 0, 0, 0.8);">
+      <img class="ui image" src="./images/nckuacm_banner.png" style="background: white"/>
+  		<h1 class="ui center aligned huge header" style="color:white">2017 Spring NCKU ACM Training Courses</h1>
+  		<h2 class="ui center aligned header" style="color:white">Discuss platform: <a style="color:#befffc;text-decoration:underline" href="https://nckuacm.slack.com" target="_blank">nckuacm.slack.com</a></h2>
+  		<h2 class="ui center aligned header" style="color:white"><a style="color:#befffc;text-decoration:underline" href="./winter.html">Winter training courses</a></h2>
+  	</div>
+
+    <!-- Information -->
+    <div class="ui raised segment">
+  		<h1 class="ui center aligned huge header" style="font-size: 3em;">Information</h1><br>
+      <h2 class="ui center aligned header">上課時間：週三 18:30 ~ 21:30</h2>
+      <h2 class="ui center aligned header">上課教室：3F 65304 電腦教室</h2>
+      <h2 class="ui center aligned header">助教信箱：<a href="mailto:nckuacm@imslab.org">nckuacm@imslab.org</a></h2>
+      <h2 class="ui center aligned header">大學部作業繳交請利用 Moodle 平台</h2>
+      <h2 class="ui center aligned header">高中生作業繳交請寄至助教信箱</h2>
+    </div>
+
+    <!-- Syllabus -->
+    <div class="ui raised segment">
+  		<h1 class="ui center aligned huge header" style="font-size: 3em;">Syllabus</h1><br>
+
+      <table class="table table-hover table-responsive">
+        <thead>
+  				<tr>
+            <th style="width: 5%">#</th>
+  					<th style="width: 15%">Date</th>
+  					<th style="width: 38%">Topic</th>
+            <th style="width: 12%"></th>
+  					<th style="width: 30%">Detail</th>
+  				</tr>
+  			</thead>
+        <tbody>
+  				<tr>
+            <td>1</td>
+            <td>02/22</td>
+  					<td>課程規劃</td>
+            <td>
+              <a href="./slides/Week1_Intro.ppt" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <a href="#" target="_blank" disabled><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            </td>
+  					<td class="detail">評分機制<br>行事曆</td>
+  				</tr>
+          <tr data-toggle="tooltip" data-html="true"
+            title="<p style='text-align: left'>題目<br>
+            A: UVa 10424<br>
+            B: UVa 11858<br>
+            C: UVa 793<br>
+            D: UVa 156<br>
+            E: UVa 383<br>
+            F: UVa 352</p>">
+            <td>2</td>
+            <td>03/01</td>
+  					<td>期初比賽</td>
+            <td></td>
+  					<td class="detail">範圍：寒訓內容</td>
+  				</tr>
+          <tr>
+            <td></td>
+            <td></td>
+  					<td>補充：C++ string</td>
+            <td>
+              <a href="./slides/String.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <a href="https://youtu.be/AjRVOJuobQE" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            </td>
+  					<td></td>
+  				</tr>
+          <tr>
+            <td>3</td>
+            <td>03/08</td>
+  					<td>Math</td>
+            <td>
+              <a href="./slides/Math.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/watch?v=g_UAA9J8Uao" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            </td>
+  					<td class="detail">GCD, 數論相關 etc.</td>
+  				</tr>
+          <tr>
+            <td>4</td>
+            <td>03/15</td>
+  					<td>Solving Strategy 1</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="BFS-DP" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="BFS-DP">
+                  <a class="dropdown-item" href="./slides/Backtracking.pptx" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Backtracking</a>
+                  <a class="dropdown-item" href="./slides/DynamicProgramming.pptx" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i><span> Dynamic</span><br><span style="padding-left: 14px">&nbsp;Programming</span></a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="BFS-DP-VDO" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="BFS-DP-VDO">
+                  <a class="dropdown-item" href="https://www.youtube.com/watch?v=n5rStHZZUB8" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Backtracking</a>
+                  <a class="dropdown-item" href="https://www.youtube.com/watch?v=l_nP5F6S7yw" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i><span> Dynamic</span><br><span style="padding-left: 14px">&nbsp;Programming</span></a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Backtracking<br>Basic DP</td>
+  				</tr>
+          <tr>
+            <td>5</td>
+            <td>03/22</td>
+  					<td>Solving Strategy 2</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="BS-LIS-LCS" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="BS-LIS-LCS">
+                  <a class="dropdown-item" href="./slides/BinarySearch.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Binary Search</a>
+                  <a class="dropdown-item" href="./slides/LIS.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> LIS</a>
+                  <a class="dropdown-item" href="./slides/LCS.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> LCS</a>
+                  <a class="dropdown-item" href="http://codepad.org/xxEQk0f9" target="_blank"><i class="fa fa-code" aria-hidden="true"></i> LCS example</a>
+                  <a class="dropdown-item" href="./slides/BS_LIS_LCS_ProblemList.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Problem List</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="BS-LIS-LCS-VDO" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="BS-LIS-LCS-VDO">
+                  <a class="dropdown-item" href="https://youtu.be/POAtrS_2DJ4" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> BinarySearch</a>
+                  <a class="dropdown-item" href="https://youtu.be/2AeUYqGAoZ4" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> LIS</a>
+                  <a class="dropdown-item" href="https://youtu.be/VTMczcKNUrQ" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> LCS</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Binary Search<br>LCS/LIS</td>
+  				</tr>
+          <tr>
+            <td>6</td>
+            <td>03/29</td>
+  					<td>String Matching</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="./slides/2017_stringMatching.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> String Matching</a>
+                  <a class="dropdown-item" href="./slides/2017_trie.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Trie</a>
+                  <a class="dropdown-item" href="./slides/2017_hwString.htm" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Problem List</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownStringVideo" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownStringVideo">
+                  <a class="dropdown-item" href="https://youtu.be/2K-MePQKQos" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Basic, KMP</a>
+                  <a class="dropdown-item" href="https://youtu.be/tNKWdwjle9k" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Z-algorithm</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">String related algorithm</td>
+  				</tr>
+          <tr>
+            <td>7</td>
+            <td>04/05</td>
+  					<td>Graph 1</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="ShortestPathMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="ShortestPathMenuLink">
+                  <a class="dropdown-item" href="./slides/2017_ShortestPathWrong.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> think about shortest path</a>
+                  <a class="dropdown-item" href="./slides/2017_ShortestPath.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Introduction to Shortest Path</a>
+                  <a class="dropdown-item" href="./slides/2017_ShortestPathSupplement.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> 補充 (Dijska, A*)</a>
+                  <a class="dropdown-item" href="./slides/2017_hwShortestPath.htm" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Problem List</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="ShortestPathVideoLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="ShortestPathVideoLink">
+                  <a class="dropdown-item" href="https://youtu.be/q9BGyo8D4eY" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> introduction</a>
+                  <a class="dropdown-item" href="https://youtu.be/PmMCgVCSjzw" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Bellman Ford</a>
+                  <a class="dropdown-item" href="https://youtu.be/9nkxIVMJJg0" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> negative cycle</a>
+                  <a class="dropdown-item" href="https://youtu.be/G-iGen7ZgHg" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> SPFA</a>
+                  <a class="dropdown-item" href="https://youtu.be/mWKNLX6d8Pk" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Floyd-Warshall</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Shortest Path</td>
+  				</tr>
+          <tr>
+            <td>8</td>
+            <td>04/12</td>
+  					<td>線上競賽</td>
+            <td>
+              <a href="https://sites.google.com/site/itsancku/home" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </td>
+  					<td class="detail">PTC/ITSA</td>
+  				</tr>
+          <tr>
+            <td>9</td>
+            <td>04/19</td>
+  					<td>Graph 2</td>
+            <td>
+              <a href="./slides/SCC.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="Graph2VideoLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="Graph2VideoLink">
+                  <a class="dropdown-item" href="https://youtu.be/Q3Esf5PBp-U" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i><span> Articulation &</span><br><span style="padding-left: 14px">&nbsp;Bridge</span></a>
+                  <a class="dropdown-item" href="https://youtu.be/3DEDJJbFpK8" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> SCC</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">SCC</td>
+  				</tr>
+          <tr data-toggle="tooltip" data-html="true"
+            title="<p style='text-align: left'>題目<br>
+            A: UVa_324<br>
+            B: UVa_10819<br>
+            C: UVa_10635<br>
+            D: UVa_10000<br>
+            E: UVa_12604</p>">
+            <td>10</td>
+            <td>04/26</td>
+  					<td>Graph 3 及 期中比賽</td>
+            <td>
+              <a href="slides/MST.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/watch?v=N7njzcjwl0w" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            </td>
+  					<td class="detail">MST<br>期中比賽</td>
+  				</tr>
+          <tr>
+            <td>11</td>
+            <td>05/03</td>
+  					<td>Graph 4</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="./slides/2017_Maximum_Flow.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Max Flow</a>
+                  <a class="dropdown-item" href="./slides/2017_MCMF.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> MCMF</a>
+                  <a class="dropdown-item" href="./slides/2017_hwMaxFlow.htm" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Problem List</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="https://youtu.be/QEnNSPG3vSs" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Max Flow</a>
+                  <a class="dropdown-item" href="https://youtu.be/nAObRjNxF0Y" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> MCMF</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Max Flow<br>MCMF</td>
+  				</tr>
+          <tr>
+            <td>12</td>
+            <td>05/10</td>
+  					<td>Graph 5</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="./slides/2017_BipartiteMatching.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Bipartite Matching</a>
+                  <a class="dropdown-item" href="./slides/2017_BipartiteMatchingExt.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Extension</a>
+                  <a class="dropdown-item" href="./slides/2017_hwBipartite.htm" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Problem List</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="bipartiteVideoLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="bipartiteVideoLink">
+                  <a class="dropdown-item" href="https://youtu.be/tUNem3-hG_E" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Bipartite Matching</a>
+                  <a class="dropdown-item" href="https://youtu.be/0b-MXbVlQ9E" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> extension</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Bipartite Matching</td>
+  				</tr>
+					<tr>
+            <td>13</td>
+            <td>05/17</td>
+  					<td style="font-size: 0.8em;">Data Structure - Sequence (Range Query)</td>
+            <td>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenuLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="slides/20170517-RangeQuery.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Binary Indexed/Segment Tree</a>
+                  <a class="dropdown-item" href="slides/1_2014_02_26_BST_BH.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i> Binary Search Tree / Binary Heap</a>
+                </div>
+              </span>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="bipartiteVideoLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="bipartiteVideoLink">
+                  <a class="dropdown-item" href="https://youtu.be/UYb9_w_XDeQ" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Binary Indexed/Segment Tree</a>
+                  <a class="dropdown-item" href="https://youtu.be/lwU2ozIPkDM?list=PL60DjzfZj9db74iZUDgk4ULBOPymorRUo" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Binary Search Tree / Binary Heap</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail">Binary Indexed Tree<br>Segment Tree</td>
+  				</tr>
+          <tr>
+            <td>14</td>
+            <td>05/24</td>
+  					<td>期中團體賽</td>
+            <td></td>
+  					<td class="detail"></td>
+  				</tr>
+          <tr>
+            <td>15</td>
+            <td>05/31</td>
+  					<td style="font-size: 0.8em;">Computational Geometry</td>
+            <td>
+              <a href="./slides/Computational-Geometry.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <a href="https://youtu.be/9s_0syjTihs" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+            </td>
+  					<td class="detail">Line Intersection<br>Convex Hull</td>
+  				</tr>
+          <tr>
+            <td>16</td>
+            <td>06/07</td>
+  					<td style="font-size: 0.8em;">Dynamic Programming</td>
+            <td>
+              <a href="./slides/DynamicProgramming-2.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+              <span class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dp2VideoLink" target="_blank" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                <div class="dropdown-menu" aria-labelledby="dp2VideoLink">
+                  <a class="dropdown-item" href="https://youtu.be/cAZtxkovC1g" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Dinamic Programming / 概念講解</a>
+                  <a class="dropdown-item" href="https://youtu.be/xXxeqNiqO2Q" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Dinamic Programming / 基礎例題</a>
+                  <a class="dropdown-item" href="https://youtu.be/peB1d-EDofM" target="_blank"><i class="fa fa-video-camera" aria-hidden="true"></i> Dinamic Programming / 進階例題</a>
+                </div>
+              </span>
+            </td>
+  					<td class="detail"></td>
+  				</tr>
+          <tr>
+            <td>17</td>
+            <td>06/14</td>
+  					<td>線上競賽</td>
+            <td></td>
+  					<td class="detail">PTC/ITSA</td>
+  				</tr>
+          <tr>
+            <td>18</td>
+            <td>06/21</td>
+  					<td>期末比賽</td>
+            <td></td>
+  					<td class="detail"></td>
+  				</tr>
+  			</tbody>
+      </table>
+    </div>
+
+    <!-- Instructor and TAs -->
+    <div class="ui raised segment">
+  		<h1 class="ui center aligned header" style="font-size: 3em;">Instructor</h1><br>
+      <h2 class="ui image header">
+        <img src="http://imslab.org/images/tsaimh.jpg" class="ui tiny circular image">
+        <div class="content">
+          Meng-Hsun Tsai<br>
+          <a href="http://imslab.org/~tsaimh/" target="_blank"><button class="ui website button"><i class="world icon"></i> Website </button></a>
+          <a href="http://imslab.org/cht/" target="_blank"><button class="ui website button"><i class="world icon"></i> Lab </button></a>
+        </div>
+      </h2><br><br>
+      <h1 class="ui center aligned header" style="font-size: 3em;">TAs</h1><br>
+      <table class="ui very basic celled striped table">
+  			<tbody>
+          <tr>
+            <td><h4 class="ui image header">
+              <img src="https://avatars3.githubusercontent.com/u/3364474?v=3&s=400" class="ui mini circular image">
+              <div class="content">
+                Jingfei
+                <div class="sub header">NCKU CSIE 105</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/12509299_10205471110236756_4612860025973093265_n.jpg?oh=394798d809b05f8a0847100181d3701f&oe=58EE7600" class="ui mini circular image">
+              <div class="content">
+                Rongz
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p160x160/10350622_900365136716894_6471109640487040743_n.jpg?oh=73c0c0cf85d1b18c8a6f5361cadd1414&oe=58FA695E" class="ui mini circular image">
+              <div class="content">
+                建文哥
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+          </tr>
+          <tr>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t31.0-1/c379.0.1290.1290/10506738_10150004552801856_220367501106153455_o.jpg?oh=d59f11f9ce64d4b8484ab28a8369c195&oe=596A357C" class="ui mini circular image">
+              <div class="content">
+                勃興
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://avatars1.githubusercontent.com/u/8926940?v=3&s=460" class="ui mini circular image">
+              <div class="content">
+                DADA
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/1380776_581815175213582_571785533_n.jpg?oh=b97d7e0de14b983a77bd9acc5f3b0fcc&oe=58EF0E2F" class="ui mini circular image">
+              <div class="content">
+                吳子晨
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+          </tr>
+          <tr>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/13043249_1206372416048074_5850189550531472332_n.jpg?oh=1cb72c7fd8dad923972e9476dcfee9d9&oe=58F7AD31" class="ui mini circular image">
+              <div class="content">
+                Pin-Xuan She
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/p160x160/15390748_411931312473407_4509142913956731184_n.jpg?oh=54a4e100bab9c1bdaa2d422c873e5428&oe=58E9D568" class="ui mini circular image">
+              <div class="content">
+                洪正皇
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+            <td><h4 class="ui image header">
+              <img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-1/c40.0.160.160/p160x160/562927_10201481065181852_1029408422_n.jpg?oh=b91d20e45738acc1d3ba6802a8c4079f&oe=58DCD078" class="ui mini circular image">
+              <div class="content">
+                Chan Lam Lao
+                <div class="sub header">NCKU CSIE 106</div>
+              </div>
+            </h4></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="ui inverted vertical footer segment form-page">
+  		<div class="ui container">NCKU-ACM 2017. All Rights Reserved</div>
+  	</div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+    <!-- Custom Style -->
+    <style>
+      html, body {
+        width:100%;
+      }
+      body {
+        margin: 50px auto;
+      	background-image: url('./images/bg.jpg');
+      	background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .segment:not(.footer){
+        margin: 50px auto;
+        padding: 50px 100px 50px 100px;
+        width: 60%;
+      }
+      table {
+        font-size: 1.5em;
+      }
+      .table > tbody > tr > td {
+        vertical-align: middle;
+      }
+      .detail {
+        font-size: 0.8em;
+      }
+      a[disabled] {
+        pointer-events: none;
+        color: gray;
+      }
+      .dropdown-menu > a.dropdown-item {
+        display: block;
+        padding: 5px 10px;
+      }
+      .dropdown-menu > a.dropdown-item:hover {
+        background: #e7e7e7;
+      }
+      /* mobile version */
+      @media all and (max-width:767px) {
+        .segment:not(.footer){
+          padding: 25px;
+          width: 90%;
+        }
+      }
+  	</style>
+  </body>
+</html>
