@@ -5,7 +5,8 @@ Cheat sheet for algorithm list of ACP(Advanced Competitive Programming) course.
 
 由成功大學 - 進階競技程式設計課程提供。
 
-協做方式請參考[連結](HOW_TO_USE.md)
+* **課程管理者**協做方式請參考[連結](HOW_TO_USE.md)
+* **課程學員**協作方式請參考[這裡](CONTRIBUTING.md)
 
 ## Course
 
