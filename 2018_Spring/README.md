@@ -17,14 +17,14 @@
         * [DFS/BFS](Winter_program/DFS_BFS)
     * [比賽題目](Winter_program/Competition)
 
-* [Week 1 - 3/7 (Week1)]()
-    * 課堂內容
+* [Week 1 - 3/7 (Week1)](Week1)
+    * 課堂內容 (複習寒訓內容)
         * Sorting
         * Disjoint set
         * DFS/BFS
     * 練習（ 9 題 ）
 
-* [Week 2 - 3/14 (Week2)]()
+* [Week 2 - 3/14 (Week2)](Week2)
     * 課堂內容
         * Math (exGCD, Big Number, eps, prime number)
         * 快速冪
