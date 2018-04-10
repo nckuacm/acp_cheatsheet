@@ -5,7 +5,7 @@ Given Joe’s location in the maze and which squares of the maze are on fire, yo
 ---
 ## Input
 
-The first line of input contains a single integer, the number of test cases to follow. The first line of each test case contains the two integers $$R$$ and $$C$$, separated by spaces, with $$1 \le R, C \le 1,000$$. The following $$R$$ lines of the test case each contain one row of the maze. Each of these lines contains exactly $$C$$ characters, and each of these characters is one of:
+The first line of input contains a single integer, the number of test cases to follow. The first line of each test case contains the two integers $R$ and $C$, separated by spaces, with $1 \le R, C \le 1,000$. The following $R$ lines of the test case each contain one row of the maze. Each of these lines contains exactly $C$ characters, and each of these characters is one of:
 * `#`, a wall
 * `.`, a passable square
 * `J`, Joe’s initial position in the maze, which is a passable square

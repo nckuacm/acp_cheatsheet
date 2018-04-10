@@ -3,9 +3,9 @@
 * **Warning:** Not all numbers in this problem are decimal numbers!
 
 Multiplication of natural numbers in general is a cumbersome operation. In some cases however the product can be obtained by moving the last digit to the front.
-Example: $$179487 \times 4 = 717948$$
+Example: $179487 \times 4 = 717948$
 Of course this property depends on the numbersystem you use, in the above example we used the decimal representation. In base 9 we have a shorter example:
-$$17 \times 4 = 71$$ (base 9) as $$(9 \times 1 + 7) \times 4 = 7 \times 9 + 1$$
+$17 \times 4 = 71$ (base 9) as $(9 \times 1 + 7) \times 4 = 7 \times 9 + 1$
 
 ---
 ## Input

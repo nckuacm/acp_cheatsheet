@@ -6,7 +6,7 @@ The objective of this task is to enumerate how many different lives one can live
 ---
 ## Input
 
-Input contains several test cases separated by a blank line. The first number in the each test case is the number of events. It is followed by a list of events. Each event is described by a number, $$n$$, (possibly 0) of choices. For every one of the $$n$$ possible choices, follows a list of the next event (with sequence number larger than the present event) that will happen when that choice is picked. An event with no choices ($$n = 0$$) represents a death. It has no further events in life. The first event, event number 0, represents birth.
+Input contains several test cases separated by a blank line. The first number in the each test case is the number of events. It is followed by a list of events. Each event is described by a number, $n$, (possibly 0) of choices. For every one of the $$n$$ possible choices, follows a list of the next event (with sequence number larger than the present event) that will happen when that choice is picked. An event with no choices ($n = 0$) represents a death. It has no further events in life. The first event, event number 0, represents birth.
 
 ---
 ## Output

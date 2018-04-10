@@ -1,20 +1,20 @@
 # UVA-11085 - Back to the 8-Queens
 
-You are given a chess board (of $$8 \times 8$$ dimension) and there are 8 queens placed randomly on the board.
+You are given a chess board (of $8 \times 8$ dimension) and there are 8 queens placed randomly on the board.
 Each of the 8 queens is in different columns and that means no two queens are attacking each other vertically. But some queens are attacking each other horizontally and/or diagonally. You have to move the queens so that no two queens are attacking each other from any direction. You are allowed to move the queens vertically and thus you can only change the row positions of each queen and not the column.
-A move consists of moving a queen from (R1, C) to (R2, C) where $$1 \le R1$$, $$R2 \le 8$$ and $$R1 \ne R2$$.
+A move consists of moving a queen from $(R_1, C)4 to $(R_2, C)$ where $1 \le R_1$, $R_2 \le 8$ and $R_1 \ne R_2$.
 You have to find the minimum number of moves required to complete the task.
 
 ---
 ## Input
 
-There will be multiple test cases. Each case consists of a line containing 8 integers. All these integers will be in the range $$[1, 8]$$. The i-th integer indicates the row position of a queen in the i-th column.
+There will be multiple test cases. Each case consists of a line containing 8 integers. All these integers will be in the range $[1, 8]$. The i-th integer indicates the row position of a queen in the i-th column.
 
 ---
 ## Output
 
 For each case, output the case number followed by the required output.
-* **Constraints:** Total number of test cases will be less than $$1000$$.
+* **Constraints:** Total number of test cases will be less than 1,000.
 
 ---
 ## Sample Input

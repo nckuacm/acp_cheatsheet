@@ -6,7 +6,7 @@ Main Street is a perfectly straight road. The street number of each house is the
 ---
 ## Input
 
-The first line of input contains an integer specifying the number of test cases to follow. The first line of each test case contains two positive integers $$n$$, the number of access points that the residents can buy, and $$m$$, the number of houses on Main Street. The following $$m$$ lines contain the house numbers of the houses on Main Street, one house number on each line. There will be no more than $$100,000$$ houses on Main Street, and the house numbers will be no larger than one million.
+The first line of input contains an integer specifying the number of test cases to follow. The first line of each test case contains two positive integers $n$, the number of access points that the residents can buy, and $m$, the number of houses on Main Street. The following $m$ lines contain the house numbers of the houses on Main Street, one house number on each line. There will be no more than $100,000$ houses on Main Street, and the house numbers will be no larger than one million.
 
 ---
 ## Output
