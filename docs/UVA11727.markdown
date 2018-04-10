@@ -1,0 +1,52 @@
+---
+layout     : post
+title      : "UVA-11727 - Cost Cutting"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-25 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Sorting
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-11727
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=2827
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * **相同題目：**ZOJ-d659
+
+## 題意概要
+
+簡單來說，XYZ 公司為了要節省成本，假設現在有 $$3$$ 位員工，而現在公司要裁掉其中 $$2$$ 個。裁決得方式是裁掉拿最多薪水以及拿最少薪水的兩人，現在給你 $$3$$ 位員工的薪水，請你找出誰不會被裁員。
+* **分析：**本題相當簡單，只需要按照題目意思找到「中間值」即可。
+
+---
+## Input
+
+The first line of input is an integer $$T$$ ($$T < 20$$) that indicates the number of test cases. Each case consists of a line with $$3$$ distinct positive integers. These $$3$$ integers represent the salaries of the three employees. All these integers will be in the range $$[1,000, 10,000]$$.
+
+---
+## Output
+
+For each case, output the case number followed by the salary of the person who survives.
+
+---
+## Sample Input
+
+```
+3
+1000 2000 3000
+3000 2500 1500
+1500 1200 1800
+```
+
+---
+## Sample Output
+
+```
+Case 1: 2000
+Case 2: 2500
+Case 3: 1500
+```

@@ -1,0 +1,59 @@
+---
+layout     : post
+title      : "UVA-10591 - Happy Number"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-02 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa DataStructure Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10591
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1532
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20171219 大學程式能力檢定 CPE」題目。
+> * **相同題目：**ZOJ-d442
+
+## 題意概要
+
+讓我們定義正整數 $$S_0$$ 中每個數字的平方和為 $$S_1$$。以相同的方法我們定義 $$S_1$$ 中每個數字的平方和為 $$S_2$$，並依此類推。假如有某個 $$S_i = 1$$ ($$i \ge 1$$) 則我們說 $$S_0$$ 是一個 Happy number。如果某一個數不是 Happy number，那他就是一個 Unhappy number。例如：$$7$$ 是一個 Happy number，因為 $$7$$ → $$49$$ → $$97$$ → $$130$$ → $$10$$ → $$1$$。但是 $$4$$ 是一個 Unhappy number，因為 $$4$$ → $$16$$ → $$37$$ → $$58$$ → $$89$$ → $$145$$ → $$42$$ → $$20$$ → $$4$$，永遠也無法產生 $$1$$。
+
+* **分析：**本題為簡單的數論題型，由上述的例子 $$4$$ 會發現，$$4$$ 之所以不是 Happy number 是因為在迭代過程中出現重複的數字 $$4$$，故之後的迭代就更不可能出現 $$1$$，因此絕不可能是 Happy number。故本題的想法就是在每次迭代的過程中，檢查數字是否在之前的迭代中出現過，紀錄該次迭代的結果。提示，可以使用 `#include <set>`。
+
+---
+## Input
+
+The input consists of several test cases, the number of which you are given in the first line of the input. Each test case consists of one line containing a single positive integer $$N$$ smaller than $$109$$.
+
+---
+## Output
+
+For each test case, you must print one of the following messages:
+```
+Case #p: N is a Happy number.
+Case #p: N is an Unhappy number.
+```
+Here $$p$$ stands for the case number (starting from $$1$$). You should print the first message if the number $$N$$ is a happy number. Otherwise, print the second line.
+
+---
+## Sample Input
+
+```
+3
+7
+4
+13
+```
+
+---
+## Sample Output
+
+```
+Case #1: 7 is a Happy number.
+Case #2: 4 is an Unhappy number.
+Case #3: 13 is a Happy number.
+```

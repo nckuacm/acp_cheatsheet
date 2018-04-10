@@ -1,0 +1,51 @@
+---
+layout     : post
+title      : "UVA-10071 - Back to High School Physics"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-03 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10071
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&category=&problem=1012&mosmsg=Submission+received+with+ID+21086060
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20171219 大學程式能力檢定 CPE」題目。
+> * **相同題目：**ZOJ-d226
+
+## 題意概要
+
+某一個粒子有一初速度和等加速度。假設在 $$t$$ 秒後此粒子的速度為 $$v$$ ，請問這個粒子在 $$2t$$ 秒後所經過的位移是多少。
+
+* **分析：**本題為簡單的數論題型，由題意可以清楚知道所求為 $$2t$$ 時間過後的位移，所以直接將 $$2t \times v$$ 即為答案。
+
+---
+## Input
+
+The input will contain two integers in each line. Each line makes one set of input. These two integers denote the value of $$v$$ ($$−100\le v \le 100$$) and $$t$$ ($$0 \le t \le 200$$) ($$t$$ means at the time the particle gains that velocity)
+
+---
+## Output
+
+For each line of input print a single integer in one line denoting the displacement in double of that time.
+
+---
+## Sample Input
+
+```
+0 0
+5 12
+```
+
+---
+## Sample Output
+
+```
+0
+120
+```

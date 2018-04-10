@@ -1,0 +1,52 @@
+---
+layout     : post
+title      : "UVA-10420 - List of Conquests"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-24 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Sorting
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10420
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1361
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * **相同題目：**ZOJ-a743
+
+## 題意概要
+
+在「唐．喬凡尼」歌劇第一幕中，僕人雷波雷諾 (Leporello) 拿著一本小冊子告訴唐納．愛爾維拉 (Donna Elvira) 有關他的主人的風流事蹟：「這本小冊子記錄著每位與我的主人交往過的女子芳名，你瞧瞧，在義大利有 $$640$$ 位，在德國有 $$231$$ 位，法國 $$100$$ 位，$$91$$ 位在土耳其，在西班牙甚至超過 $$1,000$$ 位，各國、各年齡層、各社會階層的婦女都有。」這本冊子上的人名是以時間順序來記錄，每次雷波雷諾要告訴別人他主人的作風時都很麻煩，因為以國別來分類時都必須重新算一遍。你必須寫程式幫助他做計算。
+
+* **分析：**簡單來說，本題就是要找每個國家重複的個數，並按照字典順序印出答案。因此，只需要「存取國家名稱」，按「首字字母順序排序」，最後「找出重複的數量」。要注意的是，女生名字並沒有規定字數，但是若只有兩個字的話會 WA。
+
+---
+## Input
+
+The input consists of at most 2000 lines. The first line contains a number n, indicating that there will be n more lines. Each following line, with at most 75 characters, contains a country (the first word) and the name of a woman (the rest of the words in the line) Giovanni loved. You may assume that the name of all countries consist of only one word.
+
+---
+## Output
+
+The output consists of lines in alphabetical order. Each line starts with the name of a country, followed by the total number of women Giovanni loved in that country, separated by a space.
+
+---
+## Sample Input
+
+```
+3
+Spain Donna Elvira
+England Jane Doe
+Spain Donna Anna
+```
+
+---
+## Sample Output
+
+```
+England 1
+Spain 2
+```

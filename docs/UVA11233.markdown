@@ -1,0 +1,68 @@
+---
+layout     : post
+title      : "UVA-11233 - Deli Deli"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-04 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa DataStructure String
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-11233
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=&problem=2174&mosmsg=Submission+received+with+ID+21091197
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20171219 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+本題是將英文單字的複數型態變化做處理。英文單字的複數型態可以簡單列出以下規則：
+1. 字尾的最後一個字母為「y」，且倒數第二個字母為子音，則複數型態要將「y」改為「ies」結尾。
+2. 字尾的最後一個字母為「o」、「s」、「x」或是以「ch」和「sh」結尾的單字，則複數型態要加上「es」結尾。
+3. 其餘單字直接加上「s」結尾即可。
+另外，有些英文單字的複數型態不是按照上述規則變化，則將要按照給定的形式去對應。本題希望你能將給定輸入的英文單字，輸出其複數型態。
+
+* **分析：**本題為資料結構配合字串處理的題目，如果無法依循題目規則變化的，可以直接使用 `#include <map>` 存在 map 中作對應，其他的英文單字就按照題目描述的規則處理。唯獨要注意的是，以「ch」和「sh」結尾的單字要注意本身字串的長度要超過 $$1$$，另外變化後的字串結尾記得要補上 `\0` 作為結束。
+
+---
+## Input
+
+The first line of the input consists of two integers $$L$$ and $$N$$ ($$0 \le L \le 20$$, $$1 \le N \le 100$$). The following $$L$$ lines contain the description of the irregular words and their plural form. Each line consists of two words separated by a space character, where the first word is the singular, the second word the plural form of some irregular word. After the list of irregular words, the following N lines contain one word each, which you have to make plural. You may assume that each word consists of at most $$20$$ lowercase letters from the english alphabet ("a" to "z").
+
+---
+## Output
+
+Print $$N$$ lines of output, where the i-th line is the plural form of the i-th input word.
+
+---
+## Sample Input
+
+```
+3 7
+rice rice
+spaghetti spaghetti
+octopus octopi
+rice
+lobster
+spaghetti
+strawberry
+octopus
+peach
+turkey
+```
+
+---
+## Sample Output
+
+```
+rice
+lobsters
+spaghetti
+strawberries
+octopi
+peaches
+turkeys
+```

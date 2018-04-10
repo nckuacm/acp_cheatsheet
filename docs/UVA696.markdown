@@ -1,0 +1,73 @@
+---
+layout     : post
+title      : "UVA-696 - How Many Knights"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-08 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-696
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=&problem=637&mosmsg=Submission+received+with+ID+21105757
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20170926 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+在西洋棋裡面的騎士，走法和中國象棋的走法很類似，是走「日」字的對角格。如下圖所示，假設格子裡的 N 為騎士的所在位置，而圖中 X 為騎士可以走的下一步，所以本題希望在給定棋盤大小後，算出可以容納的最多騎士個數，且騎士之間彼此不能被攻擊到。
+
+|:---:|:---:|:---:|:---:|:---:|
+| | X | | X | |
+| X | | | | X |
+| | | N | | |
+| X | | | | X |
+| | X | | X | |
+
+* **分析：**本題為簡單的數學推論題。我們可以先固定給定的棋盤大小表示為「$$M \times N$$」且 $$M \le N$$。接下來針對簡單的情形討論：
+    * 當 $$M = 1$$ 時：此時棋盤上的每一格都可以放騎士，且彼此不會被攻擊。
+    * 當 $$M = 2$$ 時：此時可以將 $$N$$ 分為每四欄一段，且在每一段中最多放置四個騎士，未滿四欄的區段，若格數少於 $$3$$ 格，則將「欄數成乘上 $$2$$ 倍」即是可以放置騎士的個數，如下圖所示。
+
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | N | N | | | N | N | | | N |
+    | N | N | | | N | N | | | N |
+
+    * 當 $$M \le 3$$ 時：只能「間隔一欄且間隔一列」放置，才能放置最多的騎士個數，如下圖所示。
+    
+    |:---:|:---:|:---:|:---:|:---:|
+    | N | | N | | N |
+    | | N | | N | |
+    | N | | N | | N |
+
+---
+## Input
+
+The input consists of pairs of integers giving values for M and N, followed by a pair of zeroes.
+
+---
+## Output
+
+For each input pair, display the number of rows and columns in the board, and the number of knights that can be appropriately placed.
+
+---
+## Sample Input
+
+```
+2 3
+5 5
+4 7
+0 0
+```
+
+---
+## Sample Output
+
+```
+4 knights may be placed on a 2 row 3 column board.
+13 knights may be placed on a 5 row 5 column board.
+14 knights may be placed on a 4 row 7 column board.
+```

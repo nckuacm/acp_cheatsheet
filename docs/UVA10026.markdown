@@ -1,0 +1,52 @@
+---
+layout     : post
+title      : "UVA-10026 - Shoemaker’s problem"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-26 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Sorting
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10026
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=967
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+
+## 題意概要
+
+鞋匠一次只能選一個工作做，以 Sample Input 為例，如果先選第一件工作，則需要完成的時間為 $$3$$ 天，而這 $$3$$ 天也就無法做其他工作，因此對於其他工作而言，就要負擔罰金 $$3 \times (1000 + 2 + 5)$$ 元，故本題需要找出「罰金最小」的工作的次序。
+
+* **分析：**本題為排序問題，而在排序的過程中，需要考量相鄰兩事件 a ($$T_a$$, $$F_a$$) 與 b ($$T_b$$, $$B_b$$) 無論排序為 ab 或是 ba，其他除了 a 與 b 以外的事件之罰金是固定的，唯獨差別在於 ab ($$T_a \times F_b$$) 或是 ba ($$T_b \times F_a$$) 的損失較小。若 ab 的損失較小，則 $$(T_a \times F_b) < (T_b \times F_a)$$，換句話說，每單位時間的罰金比例為 $$(F_a / T_a) > (F_b / T_b)$$，故事件 a 的 (罰金 / 時間) 比較大。因此，本題只需將每個工作的「單位時間的罰金比例」 $$(F_i / T_i)$$ 求出後，由大到小排序即可。
+
+---
+## Input
+
+The input begins with a single positive integer on a line by itself indicating the number of the cases following, each of them as described below. This line is followed by a blank line, and there is also a blank line between two consecutive inputs. First line of input contains an integer N (1 ≤ N ≤ 1000). The next N lines each contain two numbers: the time and fine of each task in order.
+
+---
+## Output
+
+For each test case, the output must follow the description below. The outputs of two consecutive cases will be separated by a blank line. You programm should print the sequence of jobs with minimal fine. Each job should be represented by its number in input. All integers should be placed on only one output line and separated by one space. If multiple solutions are possible, print the first lexicographically.
+
+---
+## Sample Input
+
+```
+1
+4
+3 4
+1 1000
+2 2
+5 5
+```
+
+---
+## Sample Output
+
+```
+2 1 3 4
+```

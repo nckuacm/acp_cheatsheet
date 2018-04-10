@@ -1,0 +1,62 @@
+---
+layout     : post
+title      : "UVA-118 - Mutant Flatworld Explorers"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-29 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Simulation
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-118
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=54
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20180327 大學程式能力檢定 CPE」題目。
+> * **相同題目：**ZOJ-c082
+
+## 題意概要
+
+在一個 $$n \times m$$ 的棋盤上，有許多的機器人，每一個機器人會依序給定「起始座標」與「面朝方向」，並給定一串移動的指令 (包含：向右轉向、向左轉向、向前移動)，希望求得在這一串指令過後，該機器人的座標與面朝方向。在機器人移動的過程中，若機器人移動至邊界外，則會掉落棋盤外，並且註記發生掉落前的座標與面朝方向，並且之後的其他機器人都不能走到該座標。
+
+* **分析：**本題為簡單的實作題，唯獨要注意是，當前進的下一步被擋住時，則跳過前進的這一步，之後的其他指令仍要進行，直到指令結束或是掉出棋盤外。
+
+---
+## Input
+
+The first line of input is the upper-right coordinates of the rectangular world, the lower-left coordinates are assumed to be $$(0, 0)$$.
+The remaining input consists of a sequence of robot positions and instructions (two lines per robot).
+A position consists of two integers specifying the initial coordinates of the robot and an orientation (N, S, E, W), all separated by white space on one line. A robot instruction is a string of the letters "L", "R", and "F" on one line.
+Each robot is processed sequentially, i.e., finishes executing the robot instructions before the next robot begins execution.
+Input is terminated by end-of-file.
+You may assume that all initial robot positions are within the bounds of the specified grid. The maximum value for any coordinate is 50. All instruction strings will be less than 100 characters in length.
+
+---
+## Output
+
+For each robot position/instruction in the input, the output should indicate the final grid position and orientation of the robot. If a robot falls off the edge of the grid the word ‘LOST’ should be printed after the position and orientation.
+
+---
+## Sample Input
+
+```
+5 3
+1 1 E
+RFRFRFRF
+3 2 N
+FRRFLLFFRRFLL
+0 3 W
+LLFFFLFLFL
+```
+
+---
+## Sample Output
+
+```
+1 1 E
+3 3 N LOST
+2 3 S
+```

@@ -1,0 +1,60 @@
+---
+layout     : post
+title      : "UVA-11743 - Credit Check"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-07 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Simulation
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-11743
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2843&mosmsg=Submission+received+with+ID+21102736
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20170926 大學程式能力檢定 CPE」題目。
+> * **相同題目：**ZOJ-a159
+
+## 題意概要
+
+因為信用卡卡號較長，很容易在輸入的時候打錯。為了快速的識別錯誤，如數字打錯，大多數的電子商務網站都會用一種校檢演算法來確認信用卡卡號，其中有一種較為流行的檢驗演算法叫做 Luhn 演算法 (Luhn algorithm)，它可以檢測任何一位元的錯誤及多位元錯誤：
+1. 從倒數第二個位元開始，將他們放到後面，並且加倍其他沒有移動的位元到另一個列表
+2. 把列表內的數字的位元加總 ($$n$$)，再把被移到後面的數字加總 ($$m$$)，在把兩個數加起來 ($$n + m$$)
+3. 如果這個數字的結尾是 $$0$$，則信用卡卡號為合法的，反之則是不合法的。
+以這組號碼為例 `5181 2710 9900 0012`:
+1. 把相對應的數字加倍後，放到另一個列表 (**5**1**8**1 **2**7**1**0  **9**9**0**0  **0**0**1**2)：$$10$$、$$16$$、$$4$$、$$2$$、$$18$$、$$0$$、$$0$$、$$2$$。
+2. 把這些數的位元加起來得到：$$(1 + 0) + (1 + 6) + 4 + 2 + (1 + 8) + 0 + 0 + 2 = 25$$。沒有對應到的位元合為 $$1 + 1 + 7 + 0 + 9 + 0 + 0 + 2 = 20$$，所以最後的總和是 $$20 + 25 = 45$$。
+3. $$45$$ 不是以 $$0$$ 結尾，故這組信用卡號並不合法。
+對於這個問題，你需要寫一個根據 Luhn 演算法的程式來確認輸入的信用卡號是否合法。
+
+* **分析：**本題為簡單的模擬題。按照題目意思，將信用卡卡號的每一組的奇數位乘上 $$2$$ 倍並將結果的每一位數相加總，而偶數位則直接相加總，最後再將這兩個鄉加總的結果相加，若相加的結果可以為 $$10$$ 所整除，則信用卡卡號正確，反之錯誤。
+
+---
+## Input
+
+The input begins with a number $$N$$ on a single line, followed by $$N$$ lines each containing a single credit card number. Each credit card number consists of $$16$$ decimal digits in groups of four separated by single spaces.
+
+---
+## Output
+
+The output consists of one line for each input credit card number. If the credit card number is valid, this line consists of the string "Valid", otherwise it reads "Invalid".
+
+---
+## Sample Input
+
+```
+2
+5181 2710 9900 0012
+5181 2710 9900 0017
+```
+
+---
+## Sample Output
+
+```
+Invalid
+Valid
+```

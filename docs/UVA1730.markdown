@@ -1,0 +1,54 @@
+---
+layout     : post
+title      : "UVA-1730 - Sum of MSLCM"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-01 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-1730
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=4926&mosmsg=Submission+received+with+ID+21077134
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20180327 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+題目中定義一個數的所有因數 (包含本身和 $$1$$) 的總和，為該數字的的 MLCM。本題希望給定一個數字 $$N$$，其中 $$1 < N < 20,000,001$$，能夠求出從 $$2$$ 到 $$N$$ 的所有數字中的 MLCM 之總和。注意題目要求是從 $$2$$ 開始，故以下分析中會由 $$1$$ 開始討論，最後需要扣除 $$1$$！
+
+* **分析：**本題為數論題型，假設所求的 $$N = 10$$，則將 $$1$$ - $$10$$ 每個數的因數列出來後，統計抹個因數出現的次數會發現，由小至大排序，$$1$$ 總共出現 $$10$$ 次、$$2$$ 總共出現 $$5$$ 次、$$3$$ 總共出現 $$3$$ 次、...等。仔細觀察會發現，每個因數出現的次數其實就是 $$N / i$$ ($$i = 1, 2, ..., 10$$)，故直觀來說相當容易。但是，本題最關鍵的地方在於若按照上述的想法去運算，時間複雜度為 $$O(N)$$ 會超過題目的時間限制 (TLE)，因此本題在「求總和的地方不行逐一相加」。仔細觀察上述統計完的出現次數，會發現出現次數會「隨著因數變大而遞減」，而且連續因數之間的出線次數「可能會連續都一樣」，因此可以在求總和的過程中試著將「連續相同出現次數的因數一起相加」，此方法為「二分搜尋法」的概念，將上界與下界找出來，由梯形公式求總和。最後要注意的是，*本題最後要記得扣掉1*，原因是上述的討論都是從 $$1$$ 開始，而題目要求適從 $$2$$ 開始求總和，故要扣除。
+
+---
+## Input
+
+Input file contains at most 200 lines. Each line contains a positive integer which denotes the value of $$N$$ ($$1 < N < 20,000,001$$). Input is terminated by a line containing a single zero, which should not be processed.
+
+---
+## Output
+
+For each positive number N in the input, produce one line of output. This line contains an integer which denotes the value 
+$$ 
+\sum_{ i = 2 }^{ N }{ \mathrm{ MSLCM }(i) } 
+$$
+
+---
+## Sample Input
+
+```
+10
+100
+0
+```
+
+---
+## Sample Output
+
+```
+86
+823080
+```

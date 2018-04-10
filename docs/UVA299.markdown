@@ -1,0 +1,56 @@
+---
+layout     : post
+title      : "UVA-299 - Train Swapping"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-06 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Sorting
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-299
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&category=&problem=235&mosmsg=Submission+received+with+ID+21102539
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20170926 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+以前的火車站有一位工作人員稱作「車箱置換員」，他的工作是重新排列火車車箱。當每節車箱 (尤其是裝貨的車箱) 都經過適當的排列之後，火車司機在每個車站卸貨時只需從最後車箱一節一節依序放下即可。雖然在作 $$180^{\circ}$$ 的旋轉之後，車箱前後位置會相反，不過因為車箱被設計成可以前後移動，所以無所謂。現在鐵路公司需要寫一個程式來計算共需置換相鄰的車箱幾次才能使所有車箱依序排好。
+
+* **分析：**本題違簡單的泡沫排序法 (bubble sort) 問題。在由小至大的排序過程中，若發生需要交換 (swap) 的情形時，則需要計次，並在最後印出需要交換的次數，即為本題所求。
+
+---
+## Input
+
+The input contains on the first line the number of test cases ($$N$$). Each test case consists of two input lines. The first line of a test case contains an integer $$L$$, determining the length of the train ($$0 \le L \le 50$$). The second line of a test case contains a permutation of the numbers $$1$$ through $$L$$, indicating the current order of the carriages. The carriages should be ordered such that carriage $$1$$ comes first, then $$2$$, etc. with carriage $$L$$ coming last.
+
+---
+## Output
+
+For each test case output the sentence: "Optimal train swapping takes $$S$$ swaps." where $$S$$ is an integer.
+
+---
+## Sample Input
+
+```
+3
+3
+1 3 2
+4
+4 3 2 1
+2
+2 1
+```
+
+---
+## Sample Output
+
+```
+Optimal train swapping takes 1 swaps.
+Optimal train swapping takes 6 swaps.
+Optimal train swapping takes 1 swaps.
+```

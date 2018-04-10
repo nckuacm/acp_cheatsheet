@@ -1,0 +1,64 @@
+---
+layout     : post
+title      : "UVA-488 - Triangle Wave"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-27 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa I/O
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-488
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=429
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20180327 大學程式能力檢定 CPE」題目。
+> * **相同題目：** ZOJ-c013
+
+## 題意概要
+
+本題將給定「振幅」與「頻率」，由給定的振幅與頻率，輸出對應的波形。
+
+* **分析：**本題為簡單的迴圈輸出，唯獨要注意的就是換行符號。
+
+---
+## Input
+
+The input begins with a single positive integer on a line by itself indicating the number of the cases following, each of them as described below. This line is followed by a blank line, and there is also a blank line between two consecutive inputs. Each input set will contain two positive integers, each on a separate line. The first integer is the Amplitude; the second integer is the Frequency.
+
+---
+## Output
+
+For each test case, the output must follow the description below. The outputs of two consecutive cases will be separated by a blank line. For the output of your program, you will be printing wave forms each separated by a blank line. The total number of wave forms equals the Frequency, and the horizontal “height” of each wave equals the Amplitude. The Amplitude will never be greater than nine. The waveform itself should be filled with integers on each line which indicate the “height” of that line.
+
+**NOTE:** There is a blank line after each separate waveform, excluding the last one.
+
+---
+## Sample Input
+
+```
+1
+
+3
+2
+```
+
+---
+## Sample Output
+
+```
+1
+22
+333
+22
+1
+
+1
+22
+333
+22
+1
+```

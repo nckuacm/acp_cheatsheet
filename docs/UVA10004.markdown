@@ -1,0 +1,74 @@
+---
+layout     : post
+title      : "UVA-10004 - Bicoloring"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-31 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa BFS
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10420
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=945
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20180327 大學程式能力檢定 CPE」題目。
+> * **相同題目：**ZOJ-d768
+
+## 題意概要
+
+本題為「四色地圖理論 (Four Color Map Theorem)」。簡單來說，就是僅以四種顏色在地圖上不同的區域塗色，使得相鄰的區域顏色均不相同。題目將給你一個相連的圖，請你在節點上塗色 (只有 $$2$$ 種不同的顏色)，並且回答是否可以使得相鄰的節點顏色均不相同。為了使問題簡單一些，你可以假設：
+* 沒有節點會有連向自己的邊。
+* 邊是沒有方向性的，也就是說如果節點 $$A$$ 可以連到節點 $$B$$，那麼代表節點 $$B$$ 也可以連到節點 $$A$$。
+* 圖形是強連通的，也就是說任兩節點之間皆有路徑相連。
+本題希望你求得「是否可以用 $$2$$ 種顏色塗節點使得相鄰的節點顏色均不相同」。
+
+* **分析：**本題為簡單的 BFS 題目，可以透過 BFS 走遍所有的點，走過的點將它編號為 $$1$$ 或 $$2$$ (也就是將其塗為二種顏色)，如果下一個點還沒走過，就將它標上和現在這個點「不一樣的編號」(相鄰的顏色要不相同)，如果下一個已經走過，而編號「和現在這個點一樣」，回傳 false，表示不可能用兩種顏色塗節點使得相鄰的節點顏色均不相同，否則當 BFS 搜索完畢後，回傳 true。
+
+---
+## Input
+
+The input consists of several test cases. Each test case starts with a line containing the number $$n$$ ($$1 < n < 200$$) of different nodes. The second line contains the number of edges $$l$$. After this, $$l$$ lines will follow, each containing two numbers that specify an edge between the two nodes that they represent. A node in the graph will be labeled using a number $$a$$ ($$0 \le a < n$$). An input with $$n = 0$$ will mark the end of the input and is not to be processed.
+
+---
+## Output
+
+You have to decide whether the input graph can be bicolored or not, and print it as shown below.
+
+---
+## Sample Input
+
+```
+3
+3
+0 1
+1 2
+2 0
+3
+2
+0 1
+1 2
+9
+8
+0 1
+0 2
+0 3
+0 4
+0 5
+0 6
+0 7
+0 8
+0
+```
+
+---
+## Sample Output
+
+```
+NOT BICOLORABLE.
+BICOLORABLE.
+BICOLORABLE.
+```

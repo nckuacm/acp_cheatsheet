@@ -1,0 +1,49 @@
+---
+layout     : post
+title      : "UVA-10633 - Rare Easy Problem"
+subtitle   : "UVa Online Judge"
+date       : 2018-03-28 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Math
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-10633
+link       : https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1574
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20180327 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+假設有一個整數 $$N$$，將 $$N$$ 去掉個位數字後所形成的數字 $$M$$，題目目前已知 $$N - M$$，反求出可能的 $$N$$ 為多少 ($$N$$ 可能有兩組解，輸出須按照由小到大的方式)。
+
+* **分析：**本題為簡單的數論題，$$N = 10 \times a + b$$，其中 $$0 \le b \le 9$$，則 $$M = a$$。故可以得到 $$N - M = N - a = 9 \times a + b$$，因此只需要枚舉所有的 $$b$$ ($$0 \le b \le 9$$) 計算出滿足條件的 N 即為所求。
+
+---
+## Input
+
+Input consists of multiple lines, one line per case. Each line contains a single positive integer between $$10$$ and $$1018$$ inclusive, giving the value of $$N − M$$. Input is terminated by a line containing "0".
+
+---
+## Output
+
+For each case, print one line containing the possible values of $$N$$ in sorted order. Separate consecutive numbers with a single space.
+
+---
+## Sample Input
+
+```
+18
+0
+```
+
+---
+## Sample Output
+
+```
+19 20
+```

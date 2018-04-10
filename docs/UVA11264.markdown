@@ -1,0 +1,65 @@
+---
+layout     : post
+title      : "UVA-11264 - Coin Collector"
+subtitle   : "UVa Online Judge"
+date       : 2018-04-09 18:00:00
+author     : "Yung-Sheng Lu"
+tags       : OnlineJudge UVa Greedy
+comments   : true
+signature  : true
+slides     : 
+present    :
+github     : https://github.com/yungshenglu/OnlineJudgeUVA/tree/master/UVA-11264
+link       : https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2231&mosmsg=Submission+received+with+ID+21110773
+---
+
+> * UVa Online Judge 解題結果請於 Submit 後，參閱 [uHunt](https://uhunt.onlinejudge.org/)。
+> * 如果你有任何建議與指教，歡迎於下方留言一起討論喔！
+> * 本題選為「20170926 大學程式能力檢定 CPE」題目。
+
+## 題意概要
+
+假設某個國家流通的硬幣共有 $n$ 種，為了要儘可能的收集最多種不同的硬幣。假設從銀行提領 $$X$$ 元，而銀行會按照下列演算法兌換硬幣：
+
+```
+withdraw(X) {
+    if (X == 0) return;
+    令 Y 為其值不超過 X 且面額最大的硬幣。
+    給客戶一個 Y 元的硬幣。
+    withdraw(X - Y);
+}
+```
+
+本題在不限制金額的前提下，想要在一次提領中兌換到最多種不同的硬幣。
+
+* **分析：**本題為簡單的貪婪法實作。為了要換到最多總硬幣，我們會先從面額最大的硬幣 $$C_{n-1}$$ 選取，其中「面額最大的硬幣 $$C_{n-1}$$ 一定要選」，原因很簡單，如果總金額沒有換到最大面額的硬幣，換言之，就是總金額小於最的面額的硬幣，否則一定可以將總金額用最大面額的硬幣換盡，剩下不足的部分，在用其他硬幣兌換。本題使用貪婪法的關鍵：假設 $$S(i)$$ 是 $$C_1$$, $$C_2$$, ..., $$C_i$$ 這些硬幣被選中的幣值總和，必定會有 $$S(i) < C_{i+1}$$，原因很簡單，如果出現 $$S(i) \le C_{i+1}$$，銀行會優先兌換 $$C_{i+1}$$ 的硬幣。因此，可以找到一個兌換的順序：如果有 $$S(i-1) < C_i$$ 且 $$S(i) = S(i-1) + C_i < C_{i+1}$$，則 $$C_{i}$$ 會被選中。
+
+---
+## Input
+
+First line of the input contains $$T$$ the number of test cases. Each of the test cases starts with $$n$$
+($$1 \le n \le 1,000$$), the number of different types of coin. Next line contains $$n$$ integers $$C_1$$, $$C_2$$, . . . , $$C_n$$ the value of each coin type. $$C_1 < C_2 < C_3 < . . . < C_n < 1,000,000,000$$. $$C_1$$ equals to $$1$$.
+
+---
+## Output
+
+For each test case output one line denoting the maximum number of coins that Sultan can collect in a single withdrawal. He can withdraw infinite amount of money from the Bank.
+
+---
+## Sample Input
+
+```
+2
+6
+1 2 4 8 16 32
+6
+1 3 6 8 15 20
+```
+
+---
+## Sample Output
+
+```
+6
+4
+```
